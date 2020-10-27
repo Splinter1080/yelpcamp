@@ -53,7 +53,7 @@ const secret = process.env.SECRET || 'thisshouldbeabettersecret!' ;
 
 const sessionConfig = { 
     name: 'session' , 
-    secret:  , //change this later ..
+    secret  , //change this later ..
     resave: false , 
     saveUninitialized : true , 
     cookie: {
