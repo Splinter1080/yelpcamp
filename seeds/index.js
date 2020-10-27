@@ -24,9 +24,13 @@ const seedDB = async () => {
     for (let i = 0; i < 50; i++) {
         const random1000 = Math.floor(Math.random() * 1000);
         const camp = new Campground({
-            author : '5f91c16d54c7b0367419cf1e' , 
+            author : '5f91d7bcc1be244585b9f5e8' , 
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
+            geometry:{
+                type: "Point",
+                coordinates: [-113.1331, 47.0202]
+            },
             images: [
                 {
                     url : 'https://res.cloudinary.com/dmqzsnqaz/image/upload/v1603727090/YelpCamp/Mountain_xexndt.jpg' , 
